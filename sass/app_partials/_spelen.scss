@@ -1,5 +1,3 @@
-
-
 .spelen {
   display: flex;
   flex-direction: column;
@@ -8,6 +6,55 @@
     flex-grow: 1;
     position: relative;
     background-color: $zwart;
+    & > div {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      color: white;
+      h2 {
+        font-size: 1.5em;
+        margin: 1em;
+      }
+
+      form {
+        width: 80%;
+        position: relative;
+        overflow: hidden;
+      }
+      input {
+        display: block;
+        &[type="text"] {
+          font-size: 1em;
+          width: calc(100% - 1em);
+          appearance: none;
+          color: $zwart;
+          padding: .5em;
+          border: none;
+          font-family: inherit;
+          &:focus {
+            outline: 0;
+          }
+        }
+        &[type="submit"] {
+          appearance: none;
+          background-color: $blauw;
+          color: white;
+          font-family: inherit;
+          font-size: 1em;
+          width: 100%;
+          border: none;
+          padding: .5em;
+          margin-top: 2em;
+          border-radius: .5em;
+          cursor: pointer;
+        }
+      }
+
+    }
   }
 }
 

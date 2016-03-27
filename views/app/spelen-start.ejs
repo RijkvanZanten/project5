@@ -1,10 +1,14 @@
 <%- include('../partials/head.ejs'); %>
 
-<h2>Vul je naam in om te beginnen:</h2>
-<form method="POST" action="/spelen">
-  <input type="text" name="naam">
-  <input type="submit" value="Starten">
-</form>
+<main>
+  <div>
+    <h2>Vul je naam in om te beginnen:</h2>
+    <form method="POST" action="/spelen">
+      <input type="text" name="naam">
+      <input type="submit" value="Starten">
+    </form>
+  </div>
+</main>
 
 <script>
   document.querySelector('form').onsubmit = function() {
