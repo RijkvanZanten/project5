@@ -16,6 +16,8 @@
     "tests"
   ],
   "dependencies": {
-    "countUp": "https://raw.githubusercontent.com/inorganik/countUp.js/master/countUp.js"
+    "countUp": "https://raw.githubusercontent.com/inorganik/countUp.js/master/countUp.js",
+    "stay_standalone": "https://gist.githubusercontent.com/kylebarrow/1042026/raw/6be13093a008be97a88c0d6470bfa8d7d35ee44d/stay_standalone.js",
+    "social-feed": "^0.1.2"
   }
 }

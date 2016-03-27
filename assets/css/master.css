@@ -244,6 +244,62 @@ body > header a.back {
     margin-right: .5rem;
 }
 
+.social-feed-container {
+    margin-top: 2vw;
+    width: 100%;
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
+    white-space: nowrap;
+    position: relative;
+    color: white;
+}
+
+.social-feed-container article {
+    display: inline-block;
+    vertical-align: top;
+    margin: 1vw;
+    margin-left: 2vw;
+    width: 70vw;
+    padding: 1rem;
+    color: white;
+    white-space: normal;
+    line-height: 120%;
+    height: 140px;
+}
+
+.social-feed-container article a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.social-feed-container article header a {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-bottom: 1em;
+}
+
+.social-feed-container article header a img {
+    width: 3em;
+    border-radius: 50%;
+    margin-right: .5rem;
+}
+
+.social.twitter {
+    background-color: #00a8f0;
+}
+
+.social.instagram {
+    background-color: #386c99;
+}
+
+.social.facebook {
+    background-color: #365396;
+}
+
 .spelen {
     display: -webkit-flex;
     display: -ms-flexbox;

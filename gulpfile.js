@@ -12,10 +12,17 @@ var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 
 var bowerComponentsJS = [
-  'bower_components/countUp/index.js'
+  'bower_components/countUp/index.js',
+  'bower_components/jquery/dist/jquery.min.js',
+  'bower_components/codebird-js/codebird.js',
+  'bower_components/doT/doT.min.js',
+  'bower_components/moment/min/moment.min.js',
+  'bower_components/moment/locale/nl.js',
+  'bower_components/social-feed/js/jquery.socialfeed.js'
 ];
 
 var bowerComponentsCSS = [
+  'bower_components/social-feed/css/jquery.socialfeed.css'
 ];
 
 gulp.task('bower:JS', function() {
