@@ -318,19 +318,19 @@ body > header a.back {
     background-color: #fafaf4;
 }
 
-#stem #stem-controls {
+#stem div {
     background-color: #fafaf4;
     width: 80%;
     margin: 1em auto;
     padding: 1em;
 }
 
-#stem #stem-controls p {
+#stem div p {
     font-size: 2em;
     text-align: center;
 }
 
-#stem #stem-controls input {
+#stem div input {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
@@ -338,7 +338,7 @@ body > header a.back {
     margin: 5em auto;
 }
 
-#stem #stem-controls input::-webkit-slider-thumb {
+#stem div input::-webkit-slider-thumb {
     height: 40px;
     width: 20px;
     background: #005368;
@@ -348,7 +348,7 @@ body > header a.back {
     margin-top: -15px;
 }
 
-#stem #stem-controls input::-webkit-slider-runnable-track {
+#stem div input::-webkit-slider-runnable-track {
     width: 100%;
     height: 10px;
     cursor: pointer;
@@ -357,11 +357,11 @@ body > header a.back {
     border: 1px solid black;
 }
 
-#stem #stem-controls input:disabled {
+#stem div input:disabled {
     opacity: .3;
 }
 
-#stem #stem-controls button {
+#stem div button {
     display: block;
     margin: auto;
     width: 100%;
@@ -378,8 +378,37 @@ body > header a.back {
     cursor: pointer;
 }
 
-#stem #stem-controls button:disabled {
+#stem div button:disabled {
     opacity: .3;
+}
+
+#stem div #stem-controls, #stem div #stem-results {
+    display: none;
+}
+
+#stem div #stem-controls.active, #stem div .active#stem-results {
+    display: block;
+}
+
+#stem div #stem-results {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-justify-content: space-around;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    font-size: .75rem;
+}
+
+#stem div #stem-results span {
+    display: block;
+}
+
+#stem div #stem-results p:not(:last-of-type) {
+    margin-bottom: 1em;
 }
 
 .flash {

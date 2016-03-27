@@ -55,7 +55,10 @@ socket.on('setup', function(data) {
   input.setAttribute('min', data.min);
   input.setAttribute('max', data.max);
 
-  input.setAttribute('value', (data.max - data.min) / 2);
+  var avg = (data.max + data.min) / 2;
+  console.log(data.max + ' + ' + data.min + ' / 2 = ' + avg);
+
+  input.value = avg;
   geschat.innerHTML = input.value;
   huidigeSchatting = Number(input.value);
 });

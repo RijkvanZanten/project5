@@ -43,7 +43,7 @@
     }
   }
 
-  #stem-controls {
+  div {
     background-color: $wit;
     width: 80%;
     margin: 1em auto;
@@ -95,6 +95,20 @@
       &:disabled {
         opacity: .3;
       }
+    }
+    #stem-controls {
+      display: none;
+      &.active { display: block; }
+    }
+
+    #stem-results {
+      @extend #stem-controls;
+      span { display: block; }
+      p:not(:last-of-type) { margin-bottom: 1em; }
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      font-size: .75rem;
     }
   }
 }
