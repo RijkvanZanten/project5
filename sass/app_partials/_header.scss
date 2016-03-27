@@ -1,0 +1,37 @@
+/* Header */
+body > header {
+  background-color: $bruin;
+  padding: .7em;
+  box-shadow: 0 0 3px 0 rgba(0,0,0,0.5);
+  position: relative;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: auto;
+  height: 44px;
+
+  img#user {
+    width: 1.7em;
+    display: block;
+    position: absolute;
+    cursor: pointer;
+    top: calc(50% - 1.7em / 2);
+    right: 1.5em;
+  }
+
+  h1 {
+    display: inline-block;
+    font-weight: 800;
+    color: $blauw;
+    font-size: 1.2em;
+  }
+
+  a.back {
+    position: absolute;
+    color: $blauw;
+    text-decoration: none;
+    left: 1rem;
+    top: calc(50% - 1em / 2);
+  }
+}

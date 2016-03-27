@@ -1,0 +1,23 @@
+<%- include('../partials/head.ejs'); %>
+
+<main>
+  <section id="lookTv" class="active">
+    <img src="/img/tv.svg">
+    <h2>Kijk naar de tv</h2>
+  </section>
+
+  <section id="stem" class="">
+    <img src="/img/items/1.png">
+    <progress max="100" value="100"></progress>
+    <div id="stem-controls">
+      <p>€<span>1000</span></p>
+      <input type="range" min="0" max="8000" step="10" value="1000">
+      <button>Stem</button>
+    </div>
+  </section>
+</main>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="/js/spelen.js"></script>
+
+<%- include('../partials/foot.ejs'); %>

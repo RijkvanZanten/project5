@@ -1,0 +1,77 @@
+.home {
+  & article {
+    position: relative;
+    a {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+    cursor: pointer;
+    div:not(.social div) {
+      position: absolute;
+      width: 100%;
+      height: 50%;
+      bottom: 0;
+      background: linear-gradient(to top, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
+      h2 {
+        position: absolute;
+        right: .5em;
+        bottom: .5em;
+        color: white;
+      }
+    }
+  }
+
+  #blocks {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    article {
+      flex-basis: 49vw;
+      height: 49vw;
+      background-size: cover;
+      margin-top: 2vw;
+      &#opnamedagen {
+        background-image: url(/img/opnamedagen.jpg);
+      }
+      &#ontdekkingen { background-image: url(/img/ontdekkingen.jpg)}
+    }
+  }
+
+  .social-feed-container {
+    margin-top: 2vw;
+    width: 100%;
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
+    white-space: nowrap;
+    position: relative;
+    color: white;
+
+    article {
+      display: inline-block;
+      vertical-align: top;
+      margin: 1vw;
+      margin-left: 2vw;
+      width: 70vw;
+      padding: 1rem;
+      color: white;
+      white-space: normal;
+      line-height: 120%;
+      height: 140px;
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+      header a {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1em;
+        img {
+          width: 3em;
+          border-radius: 50%;
+          margin-right: .5rem;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,76 @@
+
+
+.spelen {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  main {
+    flex-grow: 1;
+    position: relative;
+    background-color: $zwart;
+  }
+}
+
+#lookTv {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+
+  &.active { display: flex; }
+  img { width: 50%; }
+  h2 {
+    font-size: 1.6em;
+    margin: 1rem 0;
+    color: $wit;
+  }
+}
+
+#stem {
+  display: none;
+  &.active { display: block; }
+  progress {
+    appearance: none;
+    width: 100%;
+    &::-webkit-progress-bar {
+      background-color: $zwart;
+    }
+    &::-webkit-progress-value {
+      background-color: $wit;
+    }
+  }
+}
+
+#results {
+  display: none;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  z-index: 999;
+  background-color: rgba(0,0,0,0.5);
+  top: 0;
+  left: 0;
+  justify-content: center;
+  align-items: center;
+  &.active { display: flex; }
+  ul {
+    background-color: $wit;
+    padding: 1em;
+    text-align: center;
+    li {
+      font-size: 1.5em;
+      margin-bottom: 1em;
+      span { display: block; }
+    }
+  }
+}
+
+.flash { animation: flash linear .5s infinite; }
+@keyframes flash {
+	0% { opacity: 1; }
+	50% { opacity: .1; }
+	100% { opacity: 1; }
+}

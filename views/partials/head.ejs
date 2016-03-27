@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="/css/master.css">
+  <title>Tussen Kunst en Kitsch</title>
+</head>
+<body class="<%= bodyclass %>">
+<% if(bodyclass != 'video' && bodyclass != 'video-login') { %>
+  <header>
+    <% if(bodyclass != 'home') { %>
+      <a href="/" class="back">< Terug</a>
+    <%} %>
+    <h1><%= pagetitle %></h1>
+    <a href="/user"><img id="user" src="/img/user.svg"></a>
+  </header>
+<% } %>

@@ -1,0 +1,16 @@
+@import 'reset';
+@import 'fontface';
+
+$bruin: #c9a266;
+$blauw: #005368;
+$wit: #fafaf4;
+$zwart: #000000;
+
+@include font-face('Anivers', '/fonts/AniversBold', 800, null, 'ttf');
+@include font-face('Anivers', '/fonts/Anivers', 400, null, 'ttf');
+
+html { font-family: "Anivers", helvetica; }
+img { width: 100%; }
+
+@import 'video';
+@import 'app';
