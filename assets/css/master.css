@@ -318,43 +318,68 @@ body > header a.back {
     background-color: #fafaf4;
 }
 
-#results {
-    display: none;
-    position: absolute;
-    width: 100vw;
-    height: 100vh;
-    z-index: 999;
-    background-color: rgba(0, 0, 0, 0.5);
-    top: 0;
-    left: 0;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
-    -ms-grid-row-align: center;
-    align-items: center;
-}
-
-#results.active {
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-}
-
-#results ul {
+#stem #stem-controls {
     background-color: #fafaf4;
+    width: 80%;
+    margin: 1em auto;
     padding: 1em;
+}
+
+#stem #stem-controls p {
+    font-size: 2em;
     text-align: center;
 }
 
-#results ul li {
-    font-size: 1.5em;
-    margin-bottom: 1em;
+#stem #stem-controls input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 100%;
+    margin: 5em auto;
 }
 
-#results ul li span {
+#stem #stem-controls input::-webkit-slider-thumb {
+    height: 40px;
+    width: 20px;
+    background: #005368;
+    cursor: pointer;
+    -webkit-appearance: none;
+    appearance: none;
+    margin-top: -15px;
+}
+
+#stem #stem-controls input::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 10px;
+    cursor: pointer;
+    background: #424242;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+#stem #stem-controls input:disabled {
+    opacity: .3;
+}
+
+#stem #stem-controls button {
     display: block;
+    margin: auto;
+    width: 100%;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: #005368;
+    font-family: inherit;
+    color: #fafaf4;
+    border: none;
+    padding: 1em;
+    font-size: 1rem;
+    border-radius: .5em;
+    cursor: pointer;
+}
+
+#stem #stem-controls button:disabled {
+    opacity: .3;
 }
 
 .flash {
