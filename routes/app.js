@@ -5,14 +5,15 @@ router.get('/', function(req, res) {
 });
 
 router.get('/spelen', function(req, res) {
-  if(req.session.user != '') {
-    res.render('app/spelen', {bodyclass: 'spelen', pagetitle: 'Het Expertspel'})
+  if(req.session.user != undefined) {
+    res.render('app/spelen', {bodyclass: 'spelen', pagetitle: 'Het Expertspel', naam: req.session.user})
   } else {
     res.render('app/spelen-start', {bodyclass: 'spelen', pagetitle: 'Het Expertspel'});
   }
 });
 
 router.post('/spelen', function(req, res) {
+  req.session.user = req.body.naam;
   res.redirect('/spelen');
 });
 

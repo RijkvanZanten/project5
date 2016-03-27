@@ -49,6 +49,8 @@ var currentAverage = {
   }
 }
 
+var scores = [];
+
 function setup(i, item, socket) {
   // Check of setup al gedaan is voor dit item, zo niet, doe de setup
   if(currentItem != i) {
@@ -68,7 +70,8 @@ function setup(i, item, socket) {
         src: item.src,
         start: item.start,
         reveal: item.reveal,
-        id: item.id
+        id: item.id,
+        prijs: item.prijs
       }
       socket.broadcast.emit('setup', data);
     } else {
@@ -114,11 +117,18 @@ io.on('connection', function (socket) {
 
     // Als er geen item is gevonden, toon 'kijk naar TV'
     if(!itemFound) setup(-1, null, socket);
+
+    if(data.playTimeSec == 330) socket.broadcast.emit('sendScores');
+    if(data.playTimeSec == 340) socket.broadcast.emit('eindScores', {scores: scores});
   });
 
   socket.on('guess', function(data) {
     currentAverage.value += data.value;
     currentAverage.peeps++;
+  });
+
+  socket.on('score', function(data) {
+    scores.push({naam: data.naam, score: data.score});
   });
 
 });

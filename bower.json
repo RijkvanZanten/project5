@@ -1,0 +1,21 @@
+{
+  "name": "project5",
+  "description": "Second screen app voor het tv-programma Tussen Kunst en Kitsch",
+  "main": "app.js",
+  "authors": [
+    "Rijk van Zanten"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/RijkvanZanten/project5",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "countUp": "https://raw.githubusercontent.com/inorganik/countUp.js/master/countUp.js"
+  }
+}

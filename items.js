@@ -2,7 +2,7 @@ var items = [
   {
     "id": 1,
     "start": 54,
-    "reveal": 120,
+    "reveal": 116,
     "eind": 130,
     "prijs": 35,
     "min": 0,
@@ -12,11 +12,11 @@ var items = [
   {
     "id": 2,
     "start": 130,
-    "reveal": 226,
+    "reveal": 223,
     "eind": 236,
-    "prijs": 6500,
-    "min": 3000,
-    "max": 9000,
+    "prijs": 800,
+    "min": 300,
+    "max": 2000,
     "src": "/img/items/2.png"
   },
   {

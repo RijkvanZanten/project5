@@ -7,7 +7,40 @@ var cleancss = require('gulp-clean-css');
 var autoprefixer = require('gulp-autoprefixer');
 var rename = require('gulp-rename');
 var cssbeautify = require('gulp-cssbeautify');
-var nodemon = require('gulp-nodemon')
+var nodemon = require('gulp-nodemon');
+var concat = require('gulp-concat');
+var uglify = require('gulp-uglify');
+
+var bowerComponentsJS = [
+  'bower_components/countUp/index.js'
+];
+
+var bowerComponentsCSS = [
+];
+
+gulp.task('bower:JS', function() {
+  gulp.src(bowerComponentsJS)
+  .pipe(concat('dependencies.js'))
+  .pipe(gulp.dest('./assets/js'))
+  .pipe(uglify())
+  .pipe(rename('dependencies.min.js'))
+  .pipe(gulp.dest('./assets/js'));
+});
+
+gulp.task('bower:CSS', function() {
+  gulp.src(bowerComponentsCSS)
+  .pipe(concat('dependencies.css'))
+  .pipe(cssbeautify({
+    indent: '    ',
+    autosemicolon: true
+  }))
+  .pipe(gulp.dest('./assets/css'))
+  .pipe(cleancss())
+  .pipe(rename('dependencies.min.css'))
+  .pipe(gulp.dest('./assets/css'));
+})
+
+gulp.task('bower', ['bower:JS', 'bower:CSS']);
 
 gulp.task('sass', function() {
   return gulp.src('./sass/*.scss')

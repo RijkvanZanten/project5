@@ -7,7 +7,12 @@
 </form>
 
 <script>
-  document.querySelector('input[type="text"]').focus();
+  document.querySelector('form').onsubmit = function() {
+    if(document.querySelector('input[type="text"]').value == '') {
+      alert('Je hebt niks ingevuld.');
+      return false;
+    }
+  };
 </script>
 
 <%- include('../partials/foot.ejs'); %>

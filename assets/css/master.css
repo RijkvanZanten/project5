@@ -382,18 +382,16 @@ body > header a.back {
     opacity: .3;
 }
 
-#stem div #stem-controls, #stem div #stem-results {
+#stem div #stem-controls {
     display: none;
 }
 
-#stem div #stem-controls.active, #stem div .active#stem-results {
+#stem div #stem-controls.active {
     display: block;
 }
 
 #stem div #stem-results {
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
+    display: none;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
@@ -403,12 +401,61 @@ body > header a.back {
     font-size: .75rem;
 }
 
-#stem div #stem-results span {
+#stem div #stem-results p > span {
     display: block;
 }
 
 #stem div #stem-results p:not(:last-of-type) {
     margin-bottom: 1em;
+}
+
+#stem div #stem-results.active {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+#stem div #stem-results #verschil {
+    opacity: .5;
+}
+
+#eindStand {
+    display: none;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    -ms-grid-row-align: center;
+    align-items: center;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+}
+
+#eindStand h2 {
+    font-size: 2em;
+    color: white;
+    text-align: center;
+    margin-bottom: 2em;
+}
+
+#eindStand table {
+    color: white;
+    font-size: 1.5em;
+}
+
+#eindStand table td {
+    padding: .5em;
+}
+
+#eindStand.active {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
 }
 
 .flash {
