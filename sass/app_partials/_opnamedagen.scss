@@ -1,0 +1,17 @@
+.opnamedagen article {
+  padding: 1em;
+  h1 {
+    color: $blauw;
+    margin: 1rem 0;
+    font-size: 1.5em;
+  }
+  h2 {
+    @extend h1;
+    font-size: 1em;
+    margin-top: 2em;
+  }
+  p {
+    @extend h2;
+    color: $zwart;
+  }
+}

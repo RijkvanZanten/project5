@@ -1,4 +1,4 @@
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+html, body, div, span, applet, object, iframe, h1, .opnamedagen article h2, .opnamedagen article p, h2, .opnamedagen article p, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
     border: 0;
     font: inherit;
     font-size: 100%;
@@ -62,24 +62,57 @@ img {
 
 .video {
     background-color: #000000;
-}
-
-.video div {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
-    width: 100vw;
-    height: 100vh;
-    position: absolute;
-    left: 0;
-    top: 0;
+    min-height: 100vh;
 }
 
-.video div video {
+.video #video {
+    -webkit-flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.video #video video {
     width: 100%;
+}
+
+.video #video #video-results {
+    position: absolute;
+    bottom: -50em;
+    right: -14em;
+    background-color: #c9a266;
+    color: #005368;
+    text-align: center;
+    width: 40em;
+    padding-top: 1em;
+    -webkit-transform: rotate(-30deg);
+    transform: rotate(-30deg);
+    transition: bottom .5s ease;
+}
+
+.video #video #video-results ul {
+    -webkit-transform: rotate(30deg);
+    transform: rotate(30deg);
+}
+
+.video #video #video-results span {
+    display: block;
+    margin-bottom: 1em;
+    font-size: 1.5em;
+}
+
+.video #video #video-results.active {
+    bottom: 0;
 }
 
 .video-login {
@@ -130,7 +163,7 @@ body > header img#user {
     right: 1.5em;
 }
 
-body > header h1 {
+body > header h1, body > header .opnamedagen article h2, .opnamedagen article body > header h2, body > header .opnamedagen article p, .opnamedagen article body > header p {
     display: inline-block;
     font-weight: 800;
     color: #005368;
@@ -164,7 +197,7 @@ body > header a.back {
     background: linear-gradient(to top, black 0%, transparent 100%);
 }
 
-.home article div:not(.social div) h2 {
+.home article div:not(.social div) h2, .home .opnamedagen article div:not(.social div) p, .opnamedagen .home article div:not(.social div) p {
     position: absolute;
     right: .5em;
     bottom: .5em;
@@ -254,7 +287,7 @@ body > header a.back {
     color: white;
 }
 
-.social-feed-container article {
+.social-feed-container > div {
     display: inline-block;
     vertical-align: top;
     margin: 1vw;
@@ -267,12 +300,12 @@ body > header a.back {
     height: 140px;
 }
 
-.social-feed-container article a {
+.social-feed-container > div a {
     text-decoration: none;
     color: inherit;
 }
 
-.social-feed-container article header a {
+.social-feed-container > div header a {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
@@ -282,7 +315,7 @@ body > header a.back {
     margin-bottom: 1em;
 }
 
-.social-feed-container article header a img {
+.social-feed-container > div header a img {
     width: 3em;
     border-radius: 50%;
     margin-right: .5rem;
@@ -337,7 +370,7 @@ body > header a.back {
     color: white;
 }
 
-.spelen main > div h2 {
+.spelen main > div h2, .spelen main > div .opnamedagen article p, .opnamedagen article .spelen main > div p {
     font-size: 1.5em;
     margin: 1em;
 }
@@ -411,7 +444,7 @@ body > header a.back {
     width: 50%;
 }
 
-#lookTv h2 {
+#lookTv h2, #lookTv .opnamedagen article p, .opnamedagen article #lookTv p {
     font-size: 1.6em;
     margin: 1rem 0;
     color: #fafaf4;
@@ -558,7 +591,7 @@ body > header a.back {
     width: 100%;
 }
 
-#eindStand h2 {
+#eindStand h2, #eindStand .opnamedagen article p, .opnamedagen article #eindStand p {
     font-size: 2em;
     color: white;
     text-align: center;
@@ -611,4 +644,23 @@ body > header a.back {
     100% {
         opacity: 1;
     }
+}
+
+.opnamedagen article {
+    padding: 1em;
+}
+
+.opnamedagen article h1, .opnamedagen article h2, .opnamedagen article p {
+    color: #005368;
+    margin: 1rem 0;
+    font-size: 1.5em;
+}
+
+.opnamedagen article h2, .opnamedagen article p {
+    font-size: 1em;
+    margin-top: 2em;
+}
+
+.opnamedagen article p {
+    color: #000000;
 }

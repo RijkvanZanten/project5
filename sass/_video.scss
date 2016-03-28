@@ -1,15 +1,32 @@
 .video {
   background-color: $zwart;
-  div {
-    display: flex;
-    align-items: center;
-    width: 100vw;
-    height: 100vh;
-    position: absolute;
-    left: 0;
-    top: 0;
-    video {
-      width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  #video {
+    flex-basis: 100%;
+    position: relative;
+    overflow: hidden;
+    video { width: 100%; }
+    #video-results {
+      position: absolute;
+      bottom: -50em;
+      right: -14em;
+      background-color: $bruin;
+      color: $blauw;
+      text-align: center;
+      width: 40em;
+      padding-top: 1em;
+      transform: rotate(-30deg);
+      transition: bottom .5s ease;
+      ul {transform: rotate(30deg);}
+      span {
+        display: block;
+        margin-bottom: 1em;
+        font-size: 1.5em;
+      }
+      &.active { bottom: 0; }
     }
   }
 }

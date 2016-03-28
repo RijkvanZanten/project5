@@ -73,10 +73,10 @@ function setup(i, item, socket) {
         id: item.id,
         prijs: item.prijs
       }
-      socket.broadcast.emit('setup', data);
+      io.emit('setup', data);
     } else {
       console.log('Show TV')
-      socket.broadcast.emit('showTV');
+      io.emit('showTV');
     }
   }
 }
@@ -89,7 +89,7 @@ function reveal(i, item, socket) {
     nl: currentAverage.avg()
   }
 
-  socket.broadcast.emit('reveal', data);
+  io.emit('reveal', data);
 }
 
 io.on('connection', function (socket) {

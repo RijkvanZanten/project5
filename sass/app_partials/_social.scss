@@ -33,7 +33,7 @@ $box_color                : hsla(204, 83%, 40%, 1);     // #1277bc
   position: relative;
   color: white;
 
-  article {
+  & > div {
     display: inline-block;
     vertical-align: top;
     margin: 1vw;

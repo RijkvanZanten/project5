@@ -17,4 +17,8 @@ router.post('/spelen', function(req, res) {
   res.redirect('/spelen');
 });
 
+router.get('/opnamedagen', function(req, res) {
+  res.render('app/opnamedagen', {bodyclass: 'opnamedagen', pagetitle: 'Opnamedagen 2016'});
+});
+
 module.exports = router;
