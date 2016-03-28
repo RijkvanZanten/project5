@@ -136,6 +136,6 @@ io.on('connection', function (socket) {
 
 // Start the server
 // -------------------------------------------------------
-server.listen(3000, function() {
+server.listen(3200, function() {
 	console.log('App started');
 });
